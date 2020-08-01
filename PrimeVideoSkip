@@ -1,0 +1,26 @@
+// ==UserScript==
+// @name         PrimeVideoSkip
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Skip intro, recap and annonces
+// @author       cristalcorp
+// @match        https://www.primevideo.com/*
+// @grant        none
+// ==/UserScript==
+
+
+(function() {
+    'use strict';
+
+    var ready = true;
+    var intro_recap_skipper = setInterval(function(){
+        if(document.getElementsByClassName('f1oordr3 f989gul f1ap0gh8 fq4bwzw f1ns8ocy fx1l1v6 f19qnh9o')[0] && ready){
+            document.getElementsByClassName('f1oordr3 f989gul f1ap0gh8 fq4bwzw f1ns8ocy fx1l1v6 f19qnh9o')[0].click();
+            }
+        }, 500);
+    var annonce_skipper = setInterval(function(){
+        if(document.getElementsByClassName('fu4rd6c f1cw2swo')[0] && ready){
+            document.getElementsByClassName('fu4rd6c f1cw2swo')[0].click();
+            }
+        }, 500);
+})();
